@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Exámenes Médicos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="dina.js" defer></script>
+</head>
+<body>
+    <h1>Evaluación de Exámenes Médicos</h1>
+    
+    <form id="formulario">
+        <h2>Datos Personales</h2>
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label>Edad:</label>
+        <input type="number" id="edad" required><br>
+
+        <label>Sexo:</label>
+        <select id="sexo">
+            <option value="seleccionar">Seleccionar</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select><br>
+
+        <h2>Resultados de Laboratorio</h2>
+        
+        <label>Glicemia en ayunas (mg/dL):</label>
+        <input type="number" id="glicemia"><br>
+
+        <label>Colesterol Total (mg/dL):</label>
+        <input type="number" id="colesterolTotal"><br>
+
+        <label>Colesterol HDL (mg/dL):</label>
+        <input type="number" id="colesterolHDL"><br>
+
+        <label for="colesterolLDL">Colesterol LDL (mg/dL):</label>
+        <input type="number" id="colesterolLDL">
+
+        <label>Colesterol VLDL (mg/dL):</label>
+        <input type="number" id="colesterolVLDL"><br>
+
+        <label>Triglicéridos (mg/dL):</label>
+        <input type="number" id="trigliceridos"><br>
+
+        <label for="tsh">TSH (mU/L):</label>
+        <input type="number" id="tsh" step="0.01"><br><br>
+
+        <label for="t4Libre">T4 Libre (ng/dL):</label>
+        <input type="number" id="t4Libre" step="0.01"><br><br>
+
+        <label for="tgo">TGO (AST) (U/L):</label>
+        <input type="number" id="tgo"><br><br>
+
+        <label for="tgp">TGP (ALT) (U/L):</label>
+        <input type="number" id="tgp"><br><br>
+
+        <label for="acidoUrico">Ácido Úrico:</label>
+        <input type="number" id="acidoUrico" step="0.1">
+
+        <label for="creatinina">Creatinina:</label>
+        <input type="number" id="creatinina" step="0.1">
+
+        <label for="hbA1c">Hemoglobina Glicosilada (%):</label>
+        <input type="number" id="hbA1c" step="0.1"><br><br>
+
+        <div id="antigenoProstaticoDiv" style="display: none;">
+            <label>Antígeno Prostático (ng/mL):</label>
+            <input type="number" id="antigenoProstatico"><br>
+        </div>
+
+        <button type="button" id="evaluarBtn">Evaluar</button>
+    </form>
+
+    <h2>Resultados</h2>
+    <div id="resultado"></div>
+</body>
+</html>
